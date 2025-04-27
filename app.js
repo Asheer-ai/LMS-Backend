@@ -22,6 +22,10 @@ app.use(
 app.use(morgan('dev'));
 app.use(cookieParser());
 
+app.get('/', (_req, res) => {
+  res.send('Welcome to the LMS Backend!');
+});
+
 // Server Status Check Route
 app.get('/ping', (_req, res) => {
   res.send('Pong');
